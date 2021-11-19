@@ -1,0 +1,10 @@
+FROM mysql:8.0.20
+
+ENV MYSQL_DATABASE=Yappa
+ENV MYSQL_USER=Yappa_user
+ENV MYSQL_PASSWORD=PtNxHCk9
+ENV MYSQL_ROOT_PASSWORD=5amEkXGy
+
+COPY init.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 3306

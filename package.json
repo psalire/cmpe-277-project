@@ -1,0 +1,77 @@
+{
+  "name": "cmpe277project",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "build-server": "babel --extensions .ts ./server/src/ -d ./server/dist/",
+    "server": "node server/dist/index.js"
+  },
+  "dependencies": {
+    "@mapbox/mapbox-sdk": "^0.13.2",
+    "@react-navigation/bottom-tabs": "^6.0.9",
+    "@react-navigation/material-top-tabs": "^6.0.6",
+    "@react-navigation/native": "^6.0.6",
+    "@react-navigation/native-stack": "^6.2.5",
+    "@types/mapbox__mapbox-sdk": "^0.13.2",
+    "argparse": "^2.0.1",
+    "axios": "^0.24.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "formik": "^2.2.9",
+    "mysql2": "^2.3.3",
+    "passport": "^0.5.0",
+    "passport-local": "^1.0.0",
+    "react": "17.0.2",
+    "react-native": "0.66.1",
+    "react-native-elements": "^3.4.2",
+    "react-native-geolocation-service": "^5.3.0-beta.3",
+    "react-native-maps": "0.29.4",
+    "react-native-pager-view": "^5.4.8",
+    "react-native-paper": "^4.10.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.9.0",
+    "react-native-tab-view": "^3.1.1",
+    "react-native-vector-icons": "^9.0.0",
+    "socket.io": "^4.3.1",
+    "socket.io-client": "^4.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/argparse": "^2.0.10",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^26.0.23",
+    "@types/passport": "^1.0.7",
+    "@types/passport-local": "^1.0.34",
+    "@types/react-native": "^0.65.0",
+    "@types/react-test-renderer": "^17.0.1",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.14.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4.4.4"
+  },
+  "resolutions": {
+    "@types/react": "^17"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
