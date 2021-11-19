@@ -70,7 +70,7 @@ const Verify = ({ route, navigation }) => {
                                 }}
                             >
                                 <Text>
-                                    Please enter the code that we sent to <Text style={{ fontStyle: "italic" }}>{email} (if valid)</Text>:
+                                    Please enter the code that we sent to <Text style={{ fontStyle: "italic" }}>{email}</Text> (if valid):
                                 </Text>
                                 <Input
                                     placeholder="Code"
@@ -241,6 +241,9 @@ const Login = ({ navigation }) => {
                             </View>
                             <Button
                                 title="Login"
+                                buttonStyle={{
+                                    borderRadius: 16,
+                                }}
                                 onPress={handleSubmit}
                             />
                         </View>
@@ -258,6 +261,9 @@ const Login = ({ navigation }) => {
                 </Text>
                 <Button
                     title="Sign up"
+                    buttonStyle={{
+                        borderRadius: 16,
+                    }}
                     onPress={() => {
                         navigation.navigate("Sign up Form");
                     }}

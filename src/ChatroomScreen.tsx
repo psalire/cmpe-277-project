@@ -14,6 +14,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { GeoPosition } from "react-native-geolocation-service";
 import Chatroom from "./Chatroom";
 import { LocationContext, LocationManagerContext } from "./MainScreen";
+import { ContextAuthenticated } from "./App";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ const ChatroomList = ({ navigation }) => {
     const [location, setLocation] = React.useState<GeoPosition | null>(null);
     const locationContext = React.useContext(LocationContext);
     const locationManagerContext = React.useContext(LocationManagerContext);
+    const { authenticatedData } = React.useContext(ContextAuthenticated);
 
     React.useEffect(() => {
         console.log(`Location updated: ${JSON.stringify(locationContext)}`);
@@ -48,6 +50,9 @@ const ChatroomList = ({ navigation }) => {
                     let loc = await locationManagerContext.getRoomnameFromLocation(locationContext);
                     if (loc) {
                         ret.push(loc);
+                    }
+                    if (authenticatedData && authenticatedData.areacode) {
+                        ret.push(authenticatedData.areacode+" Area Code");
                     }
                 }
                 catch (err) {
